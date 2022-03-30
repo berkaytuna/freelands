@@ -34,9 +34,9 @@ public class Drop implements ApplicationListener
 	TiledMap tiledMap;
 	OrthographicCamera camera;
 	TiledMapRenderer tiledMapRenderer;
-
 	Stage stage;
 	Touchpad touchpad;
+	Controller controller;
 
 	private static final int FRAME_COLS = 32, FRAME_ROWS = 8;
 
@@ -123,6 +123,8 @@ public class Drop implements ApplicationListener
 
 		spriteBatch = new SpriteBatch();
 		stateTime = 0f;
+
+		controller = new Controller(stage);
 	}
 
 	@Override
